@@ -1,0 +1,5 @@
+git clone https://github.com/n8n-io/n8n.git
+cd n8n
+git remote remove origin
+git remote add origin https://github.com/ague220601-opd/ENDOIA2025.git
+git push -u origin main
