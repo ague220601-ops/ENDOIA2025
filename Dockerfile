@@ -5,4 +5,4 @@ FROM n8nio/n8n:latest
 EXPOSE 5678
 
 # Comando de inicio
-ENTRYPOINT ["tini", "--", "n8n"]
+CMD ["n8n", "start"]
