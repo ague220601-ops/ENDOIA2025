@@ -1,8 +1,11 @@
-# Usa la imagen oficial de n8n
 FROM n8nio/n8n:latest
 
-# Expón el puerto 5678 para el servidor
-EXPOSE 5678
+# Evita problemas de permisos
+ENV N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
+ENV N8N_RUNNERS_ENABLED=true
+ENV DB_SQLITE_POOL_SIZE=5
+ENV N8N_BLOCK_ENV_ACCESS_IN_NODE=false
+ENV N8N_GIT_NODE_DISABLE_BARE_REPOS=true
 
-# Comando de inicio
+EXPOSE 5678
 CMD ["n8n", "start"]
